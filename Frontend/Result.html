@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detection Result</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<nav>
+
+<div class="logo">
+DeepFake Shield
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/detect">Detect</a></li>
+
+<li><a href="/about">About</a></li>
+
+<li><a href="/contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- =========================
+     RESULT SECTION
+========================= -->
+
+<section class="result-section">
+
+<div class="result-container">
+
+<h1>
+
+<i class="fa-solid fa-shield-halved"></i>
+Detection Report
+
+</h1>
+
+<p>
+
+AI analysis completed successfully.
+
+</p>
+
+<!-- =========================
+     RESULT STATUS
+========================= -->
+
+<h2 class="result-status">
+
+{{ prediction }}
+
+</h2>
+
+<!-- =========================
+     RESULT CARDS
+========================= -->
+
+<div class="result-grid">
+
+<!-- CONFIDENCE -->
+
+<div class="result-card">
+
+<h3>
+
+<i class="fa-solid fa-chart-pie"></i>
+Confidence Score
+
+</h3>
+
+<p>
+
+{{ confidence }}
+
+</p>
+
+</div>
+
+<!-- FILE -->
+
+<div class="result-card">
+
+<h3>
+
+<i class="fa-solid fa-file"></i>
+Uploaded File
+
+</h3>
+
+<p>
+
+{{ filename }}
+
+</p>
+
+</div>
+
+<!-- STATUS -->
+
+<div class="result-card">
+
+<h3>
+
+<i class="fa-solid fa-circle-check"></i>
+Detection Status
+
+</h3>
+
+<p>
+
+Analysis Completed
+
+</p>
+
+</div>
+
+</div>
+
+<!-- =========================
+     ACTION BUTTONS
+========================= -->
+
+<div style="margin-top:50px;">
+
+<a href="/detect" class="btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+Analyze Another File
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+
+© 2026 DeepFake Shield |
+AI Based Deepfake Detection System
+
+</p>
+
+</footer>
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

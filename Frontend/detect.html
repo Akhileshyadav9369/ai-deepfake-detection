@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detection Panel</title>
+
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+<nav>
+
+<div class="logo">
+DeepFake Shield
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/detect">Detect</a></li>
+
+<li><a href="/about">About</a></li>
+
+<li><a href="/contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- =========================
+     DETECT SECTION
+========================= -->
+
+<section class="detect-section">
+
+<div class="detect-box">
+
+<h1>
+Upload File For Detection
+</h1>
+
+<p>
+Upload image, video or audio file for AI analysis
+</p>
+
+<!-- =========================
+     UPLOAD FORM
+========================= -->
+
+<form action="/analyze"
+method="POST"
+enctype="multipart/form-data">
+
+<div class="upload-area">
+
+<label for="fileInput"
+class="custom-file-upload">
+
+<i class="fa-solid fa-upload"></i>
+Choose File
+
+</label>
+
+<input type="file"
+name="file"
+id="fileInput">
+
+<span id="file-name">
+No file chosen
+</span>
+
+</div>
+
+<button type="submit"
+class="analyze-btn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+Analyze File
+
+</button>
+
+</form>
+
+<!-- MESSAGE -->
+
+<p id="message"></p>
+
+</div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+© 2026 DeepFake Shield | AI Deepfake Detection System
+</p>
+
+</footer>
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

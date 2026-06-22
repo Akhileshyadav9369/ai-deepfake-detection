@@ -1,0 +1,994 @@
+/* ===================================================
+   AI BASED DEEPFAKE DETECTION SYSTEM
+   PROFESSIONAL CYBERPUNK FRONTEND CSS
+=================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===================================================
+   ROOT VARIABLES
+=================================================== */
+
+:root{
+
+    --bg:#050816;
+    --card:#10182b;
+    --card2:#141f3a;
+
+    --cyan:#00f7ff;
+    --purple:#7b2cff;
+    --pink:#ff2ea6;
+    --orange:#ff6b00;
+    --green:#00ff9d;
+
+    --white:#ffffff;
+    --light:#cfcfcf;
+}
+
+/* ===================================================
+   GLOBAL STYLING
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:
+    radial-gradient(circle at top left,#121d46 0%,#050816 40%),
+    radial-gradient(circle at bottom right,#2b1246 0%,#050816 35%);
+
+    color:white;
+
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+section{
+    padding:110px 0;
+}
+
+h1,h2,h3,h4{
+    font-weight:700;
+}
+
+p{
+    color:var(--light);
+    line-height:1.8;
+}
+
+/* ===================================================
+   HEADER / NAVBAR
+=================================================== */
+
+header{
+
+    width:100%;
+
+    position:fixed;
+
+    top:0;
+
+    z-index:1000;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(5,8,22,0.8);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 8%;
+}
+
+.logo{
+
+    font-size:32px;
+
+    font-family:'Orbitron',sans-serif;
+
+    color:var(--cyan);
+
+    text-shadow:0 0 20px rgba(0,247,255,0.7);
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+}
+
+nav ul li{
+
+    margin-left:35px;
+}
+
+nav ul li a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:500;
+
+    transition:0.3s;
+
+    position:relative;
+}
+
+nav ul li a:hover{
+
+    color:var(--cyan);
+}
+
+nav ul li a::after{
+
+    content:'';
+
+    width:0%;
+
+    height:2px;
+
+    background:linear-gradient(to right,var(--cyan),var(--pink));
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    transition:0.4s;
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+}
+
+/* ===================================================
+   HERO SECTION
+=================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:120px 20px;
+}
+
+.hero::before{
+
+    content:'';
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    background:radial-gradient(circle,#00f7ff33,transparent 70%);
+
+    top:-200px;
+
+    left:-200px;
+}
+
+.hero::after{
+
+    content:'';
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    background:radial-gradient(circle,#ff2ea633,transparent 70%);
+
+    bottom:-250px;
+
+    right:-200px;
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+}
+
+.hero-content h1{
+
+    font-size:78px;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+.hero-content span{
+
+    background:linear-gradient(to right,var(--cyan),var(--pink));
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:45px;
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+/* ===================================================
+   BUTTONS
+=================================================== */
+
+.btn{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(
+    135deg,
+    var(--cyan),
+    var(--purple)
+    );
+
+    transition:0.4s ease;
+
+    border:3px solid var(--cyan);
+
+    box-shadow:
+    0 0 20px rgba(0,247,255,0.5),
+    0 0 40px rgba(123,44,255,0.4);
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    border:3px solid white;
+
+    box-shadow:
+    0 0 30px rgba(0,247,255,0.8),
+    0 0 60px rgba(123,44,255,0.6);
+}
+
+.secondary-btn{
+
+    background:transparent;
+}
+
+/* ===================================================
+   FEATURES SECTION
+=================================================== */
+
+.features{
+    padding:110px 8%;
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:80px;
+}
+
+.section-title h2{
+
+    font-size:52px;
+
+    margin-bottom:20px;
+
+    font-family:'Orbitron',sans-serif;
+
+    background:linear-gradient(to right,var(--cyan),var(--pink));
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+}
+
+.feature-card{
+
+    background:linear-gradient(145deg,var(--card),var(--card2));
+
+    padding:40px 30px;
+
+    border-radius:30px;
+
+    transition:0.4s;
+
+    border:2px solid rgba(255,255,255,0.05);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.feature-card::before{
+
+    content:'';
+
+    position:absolute;
+
+    width:100%;
+
+    height:5px;
+
+    top:0;
+
+    left:0;
+
+    background:linear-gradient(to right,var(--cyan),var(--pink));
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 30px rgba(0,247,255,0.2),
+    0 0 60px rgba(255,46,166,0.15);
+}
+
+.feature-icon{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+}
+
+.feature-card h3{
+
+    font-size:26px;
+
+    color:var(--cyan);
+
+    margin-bottom:15px;
+}
+
+/* ===================================================
+   DETECT PAGE
+=================================================== */
+
+.detect-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:140px 20px;
+}
+
+.detect-box{
+
+    width:100%;
+
+    max-width:760px;
+
+    background:linear-gradient(145deg,var(--card),var(--card2));
+
+    padding:60px;
+
+    border-radius:35px;
+
+    text-align:center;
+
+    border:2px solid rgba(255,255,255,0.06);
+
+    box-shadow:
+    0 0 30px rgba(0,247,255,0.15),
+    0 0 60px rgba(123,44,255,0.12);
+}
+
+.detect-box h1{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+.detect-box p{
+
+    margin-bottom:35px;
+}
+
+/* ===================================================
+   UPLOAD AREA
+=================================================== */
+
+.upload-area{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin:40px 0;
+}
+
+#fileInput{
+    display:none;
+}
+
+/* ===================================================
+   CHOOSE FILE BUTTON
+=================================================== */
+
+.custom-file-upload{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:16px 40px;
+
+    background:linear-gradient(
+    135deg,
+    var(--cyan),
+    var(--purple)
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    transition:0.4s ease;
+
+    border:3px solid var(--cyan);
+
+    box-shadow:
+    0 0 15px rgba(0,247,255,0.5),
+    0 0 35px rgba(123,44,255,0.4);
+}
+
+.custom-file-upload:hover{
+
+    transform:translateY(-5px);
+
+    border:3px solid white;
+
+    box-shadow:
+    0 0 25px rgba(0,247,255,0.8),
+    0 0 60px rgba(123,44,255,0.6);
+}
+
+/* ===================================================
+   FILE NAME
+=================================================== */
+
+#file-name{
+
+    color:#d8d8d8;
+
+    font-size:16px;
+
+    font-weight:500;
+}
+
+/* ===================================================
+   ANALYZE BUTTON
+=================================================== */
+
+.analyze-btn{
+
+    margin-top:20px;
+
+    padding:17px 48px;
+
+    background:linear-gradient(
+    135deg,
+    var(--pink),
+    var(--orange)
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    transition:0.4s ease;
+
+    border:3px solid var(--pink);
+
+    box-shadow:
+    0 0 20px rgba(255,46,166,0.5),
+    0 0 45px rgba(255,107,0,0.4);
+}
+
+.analyze-btn:hover{
+
+    transform:translateY(-5px);
+
+    border:3px solid white;
+
+    box-shadow:
+    0 0 30px rgba(255,46,166,0.8),
+    0 0 70px rgba(255,107,0,0.7);
+}
+
+/* ===================================================
+   RESULT PAGE
+=================================================== */
+
+.result-section{
+
+    padding:140px 20px;
+}
+
+.result-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:linear-gradient(145deg,var(--card),var(--card2));
+
+    padding:60px;
+
+    border-radius:35px;
+
+    text-align:center;
+
+    border:2px solid rgba(255,255,255,0.06);
+}
+
+.result-container h1{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+.result-status{
+
+    font-size:36px;
+
+    margin:35px 0;
+
+    color:#ff4d6d;
+
+    font-weight:700;
+
+    text-shadow:0 0 20px rgba(255,77,109,0.5);
+}
+
+.result-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-top:45px;
+}
+
+.result-card{
+
+    background:rgba(255,255,255,0.04);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.result-card h3{
+
+    color:var(--cyan);
+
+    margin-bottom:15px;
+}
+
+/* ===================================================
+   ABOUT PAGE
+=================================================== */
+
+.about-section{
+
+    padding:140px 8%;
+}
+
+.about-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:35px;
+
+    box-shadow:
+    0 0 25px rgba(0,247,255,0.2),
+    0 0 50px rgba(255,46,166,0.15);
+}
+
+.about-content h1{
+
+    font-size:55px;
+
+    margin-bottom:25px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+.tech-stack{
+
+    margin-top:35px;
+}
+
+.tech-stack span{
+
+    display:inline-block;
+
+    margin:10px;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+    135deg,
+    #00f7ff22,
+    #ff2ea622
+    );
+
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+/* ===================================================
+   CONTACT PAGE
+=================================================== */
+
+.contact-section{
+
+    min-height:100vh;
+
+    padding:140px 20px;
+}
+
+.contact-container{
+
+    max-width:800px;
+
+    margin:auto;
+
+    background:linear-gradient(145deg,var(--card),var(--card2));
+
+    padding:60px;
+
+    border-radius:35px;
+
+    border:2px solid rgba(255,255,255,0.06);
+}
+
+.contact-container h1{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    font-size:52px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+.contact-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    padding:18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    background:#1a2647;
+
+    color:white;
+
+    font-size:16px;
+}
+
+.contact-form textarea{
+
+    height:180px;
+
+    resize:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    box-shadow:0 0 15px rgba(0,247,255,0.4);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+
+    color:#b9b9b9;
+}
+
+/* ===================================================
+   CONTACT BUTTON
+=================================================== */
+
+.contact-form button{
+
+    padding:18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:60px;
+
+    background:linear-gradient(
+    135deg,
+    var(--cyan),
+    var(--purple),
+    var(--pink)
+    );
+
+    background-size:300% 300%;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    letter-spacing:1px;
+
+    transition:0.4s ease;
+
+    border:3px solid var(--cyan);
+
+    box-shadow:
+    0 0 20px rgba(0,247,255,0.5),
+    0 0 40px rgba(123,44,255,0.4);
+
+    animation:gradientMove 5s ease infinite;
+}
+
+.contact-form button:hover{
+
+    transform:translateY(-5px);
+
+    border:3px solid white;
+
+    box-shadow:
+    0 0 30px rgba(0,247,255,0.8),
+    0 0 60px rgba(255,46,166,0.6);
+}
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+footer{
+
+    background:#060912;
+
+    text-align:center;
+
+    padding:35px;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+footer p{
+
+    color:#9f9f9f;
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN
+=================================================== */
+
+@media(max-width:992px){
+
+.hero-content h1{
+    font-size:58px;
+}
+
+.about-container{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:20px;
+}
+
+.hero-content h1{
+    font-size:42px;
+}
+
+.detect-box,
+.result-container,
+.contact-container{
+    padding:40px 25px;
+}
+
+.about-content h1,
+.result-container h1,
+.contact-container h1{
+    font-size:38px;
+}
+
+}
+
+@media(max-width:500px){
+
+.hero-content h1{
+    font-size:32px;
+}
+
+.hero-content p{
+    font-size:16px;
+}
+
+.logo{
+    font-size:24px;
+}
+
+nav ul li{
+    margin-left:16px;
+}
+
+.btn{
+    width:100%;
+}
+
+.detect-box h1{
+    font-size:30px;
+}
+
+}
