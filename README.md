@@ -27,5 +27,4 @@ The main goal of this project is to develop an AI-based solution that helps in i
 - Cybersecurity
 - Fake news prevention
 - Online content authenticity checking
-## Note
-Dataset not uploaded to this repository due to file size limits (GitHub's 25MB upload limit).
+
